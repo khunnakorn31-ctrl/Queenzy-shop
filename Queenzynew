@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queenzy Shop - ร้านขายไอดี Roblox</title>
+    <style>
+        body {
+            background-color: #0f0f12;
+            color: #ffffff;
+            font-family: 'Kanit', sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header { text-align: center; margin-bottom: 20px; }
+        .header h1 { color: #ffc107; margin: 0; font-size: 32px; }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 800px;
+        }
+        .card {
+            background-color: #18181c;
+            border: 1px solid #2a2a30;
+            border-radius: 16px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+        .price { font-size: 24px; color: #4caf50; font-weight: bold; margin: 10px 0; }
+        .input-box {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #333;
+            background: #222;
+            color: #fff;
+            text-align: center;
+        }
+        .btn-buy {
+            display: block;
+            background-color: #ff9800;
+            color: #000;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            font-size: 16px;
+        }
+        .btn-buy:hover { background-color: #e68a00; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Queenzy Shop</h1>
+        <p>บริการขายไอดี Roblox ไก่ตัน ราคากันเอง</p>
+    </div>
+
+    <div class="container">
+        <!-- รายการสินค้า -->
+        <div class="card">
+            <h2>🐔 ไก่ทำเงิน 100M+</h2>
+            <p style="color: #aaa;">การันตีเงิน 100M+ ในเกม พร้อมเวลตัน</p>
+            <div class="price">฿50 (ซองอั่งเปา)</div>
+            
+            <input type="text" id="giftlink" class="input-box" placeholder="วางลิงก์ซองอั่งเปาที่นี่">
+            <button class="btn-buy" onclick="sendOrder()">🛒 สั่งซื้อสินค้า</button>
+        </div>
+    </div>
+
+    <script>
+        function sendOrder() {
+            var link = document.getElementById('giftlink').value;
+            if(!link) {
+                alert('กรุณากรอกลิงก์ซองอั่งเปาก่อนครับ!');
+                return;
+            }
+            var fbLink = "https://www.facebook.com/share/1QvzdSqQY7/";
+            alert('กำลังนำคุณไปที่ Facebook เพื่อส่งซองอั่งเปาและรับไอดี!');
+            window.open(fbLink, '_blank');
+        }
+    </script>
+
+</body>
+</html>
